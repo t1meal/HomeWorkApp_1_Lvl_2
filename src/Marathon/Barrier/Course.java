@@ -15,8 +15,9 @@ public class Course {
     }
 
     public void startCourse(Team team){
-        for(Obstacle stTeam : course1){
-            for (Competitor competitor: team.getMembers()){
+        System.out.println("Начинаем полосу препятствий!");
+        for(Competitor competitor: team.getMembers()){
+            for (Obstacle stTeam : course1){
                 if(competitor.isOnDistance()){
                     stTeam.doIt(competitor);
                 }
