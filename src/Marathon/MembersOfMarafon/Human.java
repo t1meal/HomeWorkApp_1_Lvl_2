@@ -44,6 +44,7 @@ public class Human implements Competitor {
         }
     }
 
+
     @Override
     public void swim(int dist) {
         if (dist <= maxSwimDistance) {

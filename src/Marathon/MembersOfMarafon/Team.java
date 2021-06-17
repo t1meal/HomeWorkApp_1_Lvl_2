@@ -21,6 +21,7 @@ public class Team {
                 members[i].info();
             }
         }
+
     }
     public Competitor [] getMembers(){
         return members;

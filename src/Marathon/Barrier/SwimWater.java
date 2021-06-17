@@ -13,4 +13,5 @@ public class SwimWater extends Obstacle {
     public void doIt(Competitor competitor) {
         competitor.swim(length);
     }
+
 }
