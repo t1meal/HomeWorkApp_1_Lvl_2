@@ -5,13 +5,11 @@ import Marathon.MembersOfMarafon.Team;
 
 public class Course {
     private String title;
-    Obstacle course1 [] = new Obstacle[3];
+    Obstacle course1 [];
 
-    public Course(String title, int a, int b, int c){
+    public Course(String title, Obstacle...course){
         this.title = title;
-        course1 [0] = new CrossRun(a);
-        course1 [1] = new JumpWall(b);
-        course1 [2] = new SwimWater(c);
+        this.course1 = course;
     }
 
     public void startCourse(Team team){

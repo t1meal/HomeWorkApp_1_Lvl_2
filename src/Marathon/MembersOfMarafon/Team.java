@@ -4,19 +4,17 @@ import Marathon.Interfaceses.Competitor;
 
 public class Team {
      private String title;
-     private Competitor[] members = new Competitor[4];
+     private Competitor[] members;
 
 
-    public Team(String title){
+    public Team(String title, Competitor...competitors){
         this.title = title;
-        members[0] = new Human("СуперГерой");
-        members[1] = new Dog("Лайка");
-        members[2] = new Cat("Барсик");
-        members[3] = new Human("Алеша Попович");
+        this.members = competitors;
+
     }
     public void successfullyMembersInfo(){
         System.out.println("Участники состязания в игре:");
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < members.length; i++){
             if(members[i].isOnDistance()){
                 members[i].info();
             }
@@ -29,7 +27,7 @@ public class Team {
 
     public void allMembersInfo(){
         System.out.println("Все участники состязания:");
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < members.length; i++){
             members[i].info();
         }
     }
